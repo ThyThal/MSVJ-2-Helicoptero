@@ -18,6 +18,10 @@ public class DistanceLimiter : MonoBehaviour
     private float distance;
     private float desiredDistance;
 
+    //Forces
+    private Vector3 appliedSpeedForce;
+    private Vector3 appliedDirectionForce;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,14 +40,30 @@ public class DistanceLimiter : MonoBehaviour
             float dot = Vector3.Dot(body.velocity, direction);
             if (Limiter == LimiterMode.AtoB)
             {
-                body.AddForce(direction * distanceDifference * directionForceMultiplier, ForceMode.Impulse);
-                body.AddForce(-direction * dot * speedForceMultiplier, ForceMode.Impulse);
+                appliedSpeedForce = direction * distanceDifference * directionForceMultiplier;
+                body.AddForce(appliedSpeedForce, ForceMode.Impulse);
+                appliedDirectionForce = -direction * dot * speedForceMultiplier;
+                body.AddForce(appliedDirectionForce, ForceMode.Impulse);
             }
             else
             {
-                connectedBody.AddForce(-direction * distanceDifference * directionForceMultiplier, ForceMode.Impulse);
-                connectedBody.AddForce(-direction * dot * speedForceMultiplier, ForceMode.Impulse);
+               
+
+                appliedSpeedForce = -direction * distanceDifference * directionForceMultiplier;
+                connectedBody.AddForce(appliedSpeedForce, ForceMode.Impulse);
+                appliedDirectionForce = -direction * dot * speedForceMultiplier;
+                connectedBody.AddForce(appliedDirectionForce, ForceMode.Impulse);
             }
         }
+    }
+
+    public Vector3 GetAppliedSpeedForce()
+    {
+        return appliedSpeedForce;
+    }
+
+    public Vector3 GetAppliedDirectionForce()
+    {
+        return appliedDirectionForce;
     }
 }
