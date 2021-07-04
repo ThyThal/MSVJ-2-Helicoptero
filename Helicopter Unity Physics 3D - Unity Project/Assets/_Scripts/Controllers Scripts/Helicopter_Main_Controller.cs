@@ -67,6 +67,11 @@ namespace Helicopter_Controllers
                 rotorsController.UpdateRotors(mainInputManager, engines[0].CurrentRPM);
             }
         }
+
+        public float GetCurrentRPM()
+        {
+            return engines[0].CurrentRPM;
+        }
         #endregion
         
     }

@@ -9,7 +9,7 @@ public class CargoGrabber : MonoBehaviour
     [SerializeField] private KeyCode grabKey;
     [SerializeField] private Rigidbody parentRb;
     [SerializeField] private Transform parent;
-    [SerializeField] private GameObject cargo;
+    //[SerializeField] private GameObject cargo;
     [SerializeField] private FixedJoint joint;
     //[SerializeField] private HingeJoint hingeChopper;
     private bool hasCargo;
@@ -17,7 +17,7 @@ public class CargoGrabber : MonoBehaviour
     private Transform targetGrab;
     private Rigidbody targetBody;
 
-    private DistanceLimiter cargoDistanceScript;
+    private CargoForceBalancer cargoDistanceScript;
 
     // Start is called before the first frame update
     void Start()
@@ -44,11 +44,15 @@ public class CargoGrabber : MonoBehaviour
             targetGrab.position = parent.transform.position;
             //targetGrab.position = new Vector3(parentRb.centerOfMass.x,parentRb.centerOfMass.y - 0.33f,parentRb.centerOfMass.z);
             targetBody.velocity = parentRb.velocity;
+    //    }
+    //}
 
-
-
-            parentRb.AddForceAtPosition(-cargoDistanceScript.GetAppliedSpeedForce(), parent.transform.position, ForceMode.Impulse);
-            //parentRb.AddForceAtPosition(-cargoDistanceScript.GetAppliedDirectionForce(), parent.transform.position, ForceMode.Impulse);
+    //void LateUpdate()
+    //{     
+    //    if (hasCargo)
+    //    {
+            parentRb.AddForceAtPosition(-cargoDistanceScript.GetAverageSpeedForce(), parent.transform.position, ForceMode.Impulse);
+            parentRb.AddForceAtPosition(cargoDistanceScript.GetAverageDirectionForce() * 0.5f, parent.transform.position, ForceMode.Impulse);
         }
     }
 
@@ -76,7 +80,7 @@ public class CargoGrabber : MonoBehaviour
             //targetGrab.position = transform.position;
             joint.connectedAnchor = parentRb.centerOfMass - transform.up * 0.5f;
             joint.connectedBody = targetBody;
-            cargoDistanceScript = targetGrab.gameObject.GetComponent<DistanceLimiter>();
+            cargoDistanceScript = targetGrab.gameObject.GetComponent<CargoForceBalancer>();
 
             //cargo.transform.SetParent(parent);
             hasCargo = true;
