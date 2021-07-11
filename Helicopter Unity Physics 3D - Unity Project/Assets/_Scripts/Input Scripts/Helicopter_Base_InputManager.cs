@@ -19,8 +19,8 @@ namespace Helicopter_Inputs
         #region • Custom methods (1)
         protected virtual void HandleInputs()
         {
-            horizontal = Input.GetAxis("Horizontal");
-            vertical = Input.GetAxis("Vertical");
+            horizontal = Input.GetAxis("Cyclic Horizontal");
+            vertical = Input.GetAxis("Cyclic Vertical");
         }
         #endregion
     }
