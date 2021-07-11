@@ -15,7 +15,6 @@ public class SceneChangingScript : MonoBehaviour
     private int _loadPercentage = 0;
     private float _totalSceneProgress = 0;
     private List<AsyncOperation> _scenesLoading = new List<AsyncOperation>();
-
     private void Awake()
     {
         if (instance == null)
@@ -64,8 +63,8 @@ public class SceneChangingScript : MonoBehaviour
 
 public enum SceneIndex
 {
-    TitleScreen = 0,
-    Scene1 = 1,
-    Scene2 = 2,
+    MainMenu = 0,
+    GameDeliver = 1,
+    GameWater = 2,
     Scene3 = 3
 }

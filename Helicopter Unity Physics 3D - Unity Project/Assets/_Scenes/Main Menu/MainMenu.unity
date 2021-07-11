@@ -222,8 +222,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -384, y: -70}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -384, y: -30}
+  m_SizeDelta: {x: 250, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &48076690
 MonoBehaviour:
@@ -237,6 +237,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67856f78daf8c304f8008c3f2c5db8d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneIndex: 1
+  sceneChanger: {fileID: 1876874556}
 --- !u!114 &48076691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -577,8 +579,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -384, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -384, y: 54.3}
+  m_SizeDelta: {x: 250, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &109977780
 MonoBehaviour:
@@ -592,6 +594,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67856f78daf8c304f8008c3f2c5db8d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneIndex: 0
+  sceneChanger: {fileID: 1876874556}
 --- !u!114 &109977781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -635,19 +639,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 109977782}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 15505833}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: ChangeScene
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &109977782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1703,8 +1695,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -384, y: -140}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -384, y: -115}
+  m_SizeDelta: {x: 250, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1409231052
 MonoBehaviour:
@@ -1718,6 +1710,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67856f78daf8c304f8008c3f2c5db8d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneIndex: 2
+  sceneChanger: {fileID: 1876874556}
 --- !u!114 &1409231053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1849,8 +1843,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -384, y: -280}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -384, y: -285}
+  m_SizeDelta: {x: 250, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1430465509
 MonoBehaviour:
@@ -1864,6 +1858,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67856f78daf8c304f8008c3f2c5db8d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneIndex: 0
+  sceneChanger: {fileID: 1876874556}
 --- !u!114 &1430465510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1995,8 +1991,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -384, y: -210}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -384, y: -200}
+  m_SizeDelta: {x: 250, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1689189426
 MonoBehaviour:
@@ -2010,6 +2006,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67856f78daf8c304f8008c3f2c5db8d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneIndex: 3
+  sceneChanger: {fileID: 1876874556}
 --- !u!114 &1689189427
 MonoBehaviour:
   m_ObjectHideFlags: 0

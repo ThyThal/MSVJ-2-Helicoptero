@@ -9,11 +9,14 @@ public class ButtonAnimation : MonoBehaviour, IPointerEnterHandler, IPointerExit
 {
     private Button _button;
     private TextMeshProUGUI _text;
+    [SerializeField] private SceneIndex sceneIndex;
+    [SerializeField] private SceneChangingScript sceneChanger;
 
     private void Awake()
     {
         _button = GetComponent<Button>();
         _text = GetComponentInChildren<TextMeshProUGUI>();
+        _text.text = sceneIndex.ToString();
     }
 
     // Events
@@ -32,6 +35,10 @@ public class ButtonAnimation : MonoBehaviour, IPointerEnterHandler, IPointerExit
     public void OnPointerClick(PointerEventData eventData)
     {
         if (_button.IsInteractable())
+        {
             LeanTween.scale(_text.gameObject, Vector3.one, .25f).setEaseOutBounce();
+            sceneChanger.LoadScene(sceneIndex);
+        }
+
     }
 }
