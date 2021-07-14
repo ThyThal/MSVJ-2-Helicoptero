@@ -93,6 +93,7 @@ Material:
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _Enabled: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -114,9 +115,12 @@ Material:
         a: 1}
     - Color_c5323883a1be4110ba11a91ef1296589: {r: 0.42292634, g: 0.42292634, b: 3.3207548,
         a: 1}
+    - _Base: {r: 0.2509804, g: 0.345098, b: 2.996078, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.21626915, g: 1.6981132, b: 0.6760385, a: 1}
+    - _DisabledColor: {r: 0.4229263, g: 0.4229263, b: 3.320755, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EnabledColor: {r: 0.2162692, g: 1.698113, b: 0.6760385, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &3071593145193045949

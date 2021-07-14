@@ -94,7 +94,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0b9b057064d23f048b4aa57b0404326e, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -124,7 +124,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5324369266917131527}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -142,8 +142,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextWaypoint: {fileID: 0}
-  nextDirection: {x: 0, y: 0, z: 0}
+  previousWaypoint: {fileID: 0}
   indicationArrows: {fileID: 767829553050644724}
+  reachedWaypoint: 0
+  firstWaypoint: 0
+  meshRenderer: {fileID: 5324369266917131525}
+  material: {fileID: 2100000, guid: 0b9b057064d23f048b4aa57b0404326e, type: 2}
+  enabledColor: {r: 0.21626915, g: 1.6981132, b: 0.6760385, a: 1}
+  disabledColor: {r: 0.42292634, g: 0.42292634, b: 3.3207548, a: 1}
 --- !u!1001 &227686266864116345
 PrefabInstance:
   m_ObjectHideFlags: 0
