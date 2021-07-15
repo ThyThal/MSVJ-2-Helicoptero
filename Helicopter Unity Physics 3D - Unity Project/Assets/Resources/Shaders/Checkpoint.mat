@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Checkpoint
-  m_Shader: {fileID: 4800000, guid: 3eac33df5323f1b40bee673c3fd4aa22, type: 3}
+  m_Shader: {fileID: 4800000, guid: 3639357b26fa58947a16dc2503540577, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -26,3 +26,4 @@ Material:
     - _BaseColor: {r: 1, g: 0, b: 0, a: 1}
     - _EmmisiveColor: {r: 1, g: 0, b: 0, a: 1}
     - _node_7612: {r: 1, g: 0, b: 0, a: 1}
+  m_BuildTextureStacks: []
