@@ -16,8 +16,12 @@ public class CargoGrabber : MonoBehaviour
     private Collider[] colliders;
     private Transform targetGrab;
     private Rigidbody targetBody;
+    private bool hasTank;
+    private bool hasBox;
 
     private CargoForceBalancer cargoDistanceScript;
+
+    public bool HasTank => hasTank;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +29,8 @@ public class CargoGrabber : MonoBehaviour
         Debug.Log(parentRb.centerOfMass.ToString());
         parent.localPosition = new Vector3(parentRb.centerOfMass.x,parentRb.centerOfMass.y - 0.5f,parentRb.centerOfMass.z);
         hasCargo = false;
+        hasTank = false;
+        hasBox = false;
         Debug.Log(parent.localPosition.ToString());
     }
 
@@ -85,6 +91,11 @@ public class CargoGrabber : MonoBehaviour
             //cargo.transform.SetParent(parent);
             hasCargo = true;
             //hingeChopper.connectedBody = targetGrab;
+
+            if (targetGrab.gameObject.tag == "Extinguisher")
+            {
+                hasTank = true;
+            }
         }
         else
         {
@@ -95,6 +106,8 @@ public class CargoGrabber : MonoBehaviour
     private void ReleaseCargo()
     {
         hasCargo = false;
+        hasBox = false;
+        hasTank = false;
     }
 
     private void OnDrawGizmos()
