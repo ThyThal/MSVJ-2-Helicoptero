@@ -30,11 +30,14 @@ public class SceneChangingScript : MonoBehaviour
     
     public void LoadScene(SceneIndex scene)
     {
-        loadingScreen.SetActive(true);
+        if (loadingScreen != null) 
+        { 
+            loadingScreen.SetActive(true);
 
-        _scenesLoading.Add(SceneManager.LoadSceneAsync((int)scene, LoadSceneMode.Single));
+            _scenesLoading.Add(SceneManager.LoadSceneAsync((int)scene, LoadSceneMode.Single));
 
-        StartCoroutine(nameof(GetLoadSceneProgress));
+            StartCoroutine(nameof(GetLoadSceneProgress));
+        }
     }
 
     private IEnumerator GetLoadSceneProgress()

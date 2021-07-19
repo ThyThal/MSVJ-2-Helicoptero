@@ -16,7 +16,7 @@ public class ButtonAnimation : MonoBehaviour, IPointerEnterHandler, IPointerExit
     {
         _button = GetComponent<Button>();
         _text = GetComponentInChildren<TextMeshProUGUI>();
-        _text.text = sceneIndex.ToString();
+        //_text.text = sceneIndex.ToString();
     }
 
     // Events
