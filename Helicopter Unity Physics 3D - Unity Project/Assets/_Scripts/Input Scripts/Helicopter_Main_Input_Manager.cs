@@ -9,7 +9,7 @@ namespace Helicopter_Inputs
         Xbox,
     }
 
-    [RequireComponent(typeof(Helicopter_Keyboard_InputManager), typeof(Helicopter_Xbox_InputManager))]
+    [RequireComponent(typeof(Helicopter_Keyboard_InputManager))]
     public class Helicopter_Main_Input_Manager : MonoBehaviour
     {
         #region • Variables (4)
@@ -20,7 +20,7 @@ namespace Helicopter_Inputs
         public UnityEvent onCameraButtonPressed = new UnityEvent();
 
         private Helicopter_Keyboard_InputManager keyInputManager;
-        private Helicopter_Xbox_InputManager xboxInputManager;
+        //private Helicopter_Xbox_InputManager xboxInputManager;
         #endregion
         
         #region • Properties (8)
@@ -53,9 +53,9 @@ namespace Helicopter_Inputs
         private void Start()
         {
             keyInputManager = GetComponent<Helicopter_Keyboard_InputManager>();
-            xboxInputManager = GetComponent<Helicopter_Xbox_InputManager>();
+            //xboxInputManager = GetComponent<Helicopter_Xbox_InputManager>();
 
-            if (keyInputManager && xboxInputManager)
+            if (keyInputManager)
             {
                 SetInputType(inputType);
             }
@@ -63,7 +63,7 @@ namespace Helicopter_Inputs
 
         private void Update()
         {
-            if (keyInputManager && xboxInputManager)
+            if (keyInputManager)
             {
                 switch (inputType)
                 {
@@ -78,16 +78,16 @@ namespace Helicopter_Inputs
                         throttleInput = keyInputManager.RawThrottleInput;
                         break;
 
-                    case InputType.Xbox:
-                        cameraInput = xboxInputManager.CameraInput;
-                        collectiveInput = xboxInputManager.CollectiveInput;
-                        cyclicInput = xboxInputManager.CyclicInput;
-                        fire = xboxInputManager.Fire;
-                        pedalInput = xboxInputManager.PedalInput;
-                        stickyCollectiveInput = xboxInputManager.StickyCollectiveInput;
-                        stickyThrottle = xboxInputManager.StickyThrottle;
-                        throttleInput = xboxInputManager.RawThrottleInput;
-                        break;
+                    //case InputType.Xbox:
+                    //    cameraInput = xboxInputManager.CameraInput;
+                    //    collectiveInput = xboxInputManager.CollectiveInput;
+                    //    cyclicInput = xboxInputManager.CyclicInput;
+                    //    fire = xboxInputManager.Fire;
+                    //    pedalInput = xboxInputManager.PedalInput;
+                    //    stickyCollectiveInput = xboxInputManager.StickyCollectiveInput;
+                    //    stickyThrottle = xboxInputManager.StickyThrottle;
+                    //    throttleInput = xboxInputManager.RawThrottleInput;
+                    //    break;
 
                     default:
                         break;
@@ -107,13 +107,13 @@ namespace Helicopter_Inputs
             if (type == InputType.Keyboard)
             {
                 keyInputManager.enabled = true;
-                xboxInputManager.enabled = false;
+                ////xboxInputManager.enabled = false;
             }
 
             if (type == InputType.Xbox)
             {
                 keyInputManager.enabled = false;
-                xboxInputManager.enabled = true;
+                //xboxInputManager.enabled = true;
             }
         }
         #endregion

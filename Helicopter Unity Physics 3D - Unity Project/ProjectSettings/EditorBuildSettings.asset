@@ -9,12 +9,15 @@ EditorBuildSettings:
     path: Assets/_Scenes/Main Menu/MainMenu.unity
     guid: 18d00230c285513488b03ca96af50ed0
   - enabled: 1
-    path: Assets/_Scenes/Main Menu/GameDeliver.unity
-    guid: 945f9cbe45d2c484fac7c085909b2680
+    path: Assets/_Scenes/LearnToFly.unity
+    guid: 6ee1336a06018734e9c1bc65f118ab9f
   - enabled: 1
-    path: Assets/_Scenes/Main Menu/GameWater.unity
-    guid: 3404cb9bd328cca449216bffa46f883b
+    path: Assets/_Scenes/CheckpointDash.unity
+    guid: 632255e80e7ec9d4b9c47b84bb01835a
   - enabled: 1
-    path: Assets/_Scenes/Main Menu/Scene 3.unity
-    guid: 27d5350e6364b94488025d4b92a4fa29
+    path: Assets/_Scenes/FireExtinguishing.unity
+    guid: 1dd86199cc1938747a4ebc19ec2e1d3c
+  - enabled: 1
+    path: Assets/_Scenes/CargoHaul.unity
+    guid: 1a35281209f0f1847aa7136be9cfa6b7
   m_configObjects: {}

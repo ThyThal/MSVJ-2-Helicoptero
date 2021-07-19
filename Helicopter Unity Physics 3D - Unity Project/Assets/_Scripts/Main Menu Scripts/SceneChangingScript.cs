@@ -64,7 +64,8 @@ public class SceneChangingScript : MonoBehaviour
 public enum SceneIndex
 {
     MainMenu = 0,
-    GameDeliver = 1,
-    GameWater = 2,
-    Scene3 = 3
+    LearnToFly = 1,
+    CheckpointDash = 2,
+    FireExtinguishing = 3,
+    CargoHaul = 4
 }

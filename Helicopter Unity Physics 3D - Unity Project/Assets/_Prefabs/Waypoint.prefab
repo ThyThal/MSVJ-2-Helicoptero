@@ -94,7 +94,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0b9b057064d23f048b4aa57b0404326e, type: 2}
+  - {fileID: 2100000, guid: af17a0cadfb9b904b8f810bcf6a8a39c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -124,7 +124,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5324369266917131527}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -142,7 +142,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextWaypoint: {fileID: 0}
-  nextDirection: {x: 0, y: 0, z: 0}
   indicationArrows: {fileID: 767829553050644724}
 --- !u!1001 &227686266864116345
 PrefabInstance:
@@ -210,7 +209,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 221000f775db6f44fa9e3d427ce9a0eb, type: 2}
+      objectReference: {fileID: 2100000, guid: 65e308d8b0a26874eb96bff0dc79fb48, type: 2}
     - target: {fileID: 919132149155446097, guid: 0b2659e5bbc35cc49ab2d19ce260e24a,
         type: 3}
       propertyPath: m_Name
@@ -290,7 +289,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 221000f775db6f44fa9e3d427ce9a0eb, type: 2}
+      objectReference: {fileID: 2100000, guid: 65e308d8b0a26874eb96bff0dc79fb48, type: 2}
     - target: {fileID: 919132149155446097, guid: 0b2659e5bbc35cc49ab2d19ce260e24a,
         type: 3}
       propertyPath: m_Name

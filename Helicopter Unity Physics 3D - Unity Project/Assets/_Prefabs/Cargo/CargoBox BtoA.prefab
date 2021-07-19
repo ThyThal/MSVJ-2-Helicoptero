@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 677867999}
   m_Layer: 9
   m_Name: Hook
-  m_TagString: Untagged
+  m_TagString: Cargo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -497,7 +497,7 @@ GameObject:
   m_Component:
   - component: {fileID: 582071793887195551}
   m_Layer: 0
-  m_Name: Chain (distance limiter) (2)
+  m_Name: CargoBox BtoA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
