@@ -7,6 +7,7 @@ Shader "Unlit/Checkpoint" {
     Properties {
         _BaseColor ("Base Color", Color) = (1,0,0,1)
         _BlendAlpha ("Blend Alpha", Range(0, 1)) = 1
+		//_Opacity ("Opacity", Range(0, 1)) = 1
         [HideInInspector]_Cutoff ("Alpha cutoff", Range(0,1)) = 0.5
     }
     SubShader {
@@ -88,26 +89,29 @@ Shader "Unlit/Checkpoint" {
                 fixed4 finalRGBA = fixed4(finalColor,(lerp(1.0,0.0,i.uv0.g)*_BlendAlpha_var));
                 UNITY_APPLY_FOG(i.fogCoord, finalRGBA);
                 return finalRGBA;
-            }
-            ENDCG
-        }
-        Pass {
-            Name "FORWARD_DELTA"
-            Tags {
-                "LightMode"="ForwardAdd"
-            }
-            Blend One One
-            ZWrite Off
-            
-            CGPROGRAM
-            #pragma vertex vert
-            #pragma fragment frag
-            #pragma multi_compile_instancing
-            #include "UnityCG.cginc"
-            #include "AutoLight.cginc"
-            #pragma multi_compile_fwdadd
-            #pragma multi_compile_fog
-            #pragma target 3.0
+			}
+				ENDCG
+	}
+		Pass{
+			Name "FORWARD_DELTA"
+			Tags {
+				"LightMode" = "ForwardAdd"
+			}
+			Blend One One
+			ZWrite Off
+
+			CGPROGRAM
+			#pragma vertex vert
+			#pragma fragment frag
+			#pragma multi_compile_instancing
+			#include "UnityCG.cginc"
+			#include "AutoLight.cginc"
+			#pragma multi_compile_fwdadd
+			#pragma multi_compile_fog
+			#pragma target 3.0
+
+			//float op = _Opacity;
+
             uniform float4 _LightColor0;
             UNITY_INSTANCING_BUFFER_START( Props )
                 UNITY_DEFINE_INSTANCED_PROP( float4, _BaseColor)
@@ -159,7 +163,7 @@ Shader "Unlit/Checkpoint" {
 /// Final Color:
                 float3 finalColor = diffuse;
                 float _BlendAlpha_var = UNITY_ACCESS_INSTANCED_PROP( Props, _BlendAlpha );
-                fixed4 finalRGBA = fixed4(finalColor * (lerp(1.0,0.0,i.uv0.g)*_BlendAlpha_var),0);
+                fixed4 finalRGBA = fixed4(finalColor * (lerp(1.0,0.0,i.uv0.g)*_BlendAlpha_var), 0);
                 UNITY_APPLY_FOG(i.fogCoord, finalRGBA);
                 return finalRGBA;
             }
