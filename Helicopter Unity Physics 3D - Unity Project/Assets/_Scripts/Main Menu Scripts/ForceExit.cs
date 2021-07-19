@@ -16,7 +16,8 @@ public class ForceExit : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadSceneAsync(0, LoadSceneMode.Single);
+            //SceneManager.LoadSceneAsync(0, LoadSceneMode.Single);
+            SceneManager.LoadScene(0);
         }
     }
 }

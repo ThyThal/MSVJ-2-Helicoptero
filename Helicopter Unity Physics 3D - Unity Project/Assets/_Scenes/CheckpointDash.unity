@@ -8125,6 +8125,7 @@ GameObject:
   - component: {fileID: 1545836168}
   - component: {fileID: 1545836167}
   - component: {fileID: 1545836169}
+  - component: {fileID: 1545836170}
   m_Layer: 0
   m_Name: CanvasContainer
   m_TagString: Untagged
@@ -8200,6 +8201,18 @@ MonoBehaviour:
   - {fileID: 1661898663}
   passText: {fileID: 1690910161}
   checkText: {fileID: 1016997025}
+--- !u!114 &1545836170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545836166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b121cb211b1d894d9f5f40f53a825d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1553041525
 GameObject:
   m_ObjectHideFlags: 0

@@ -5689,6 +5689,11 @@ PrefabInstance:
       propertyPath: onCameraButtonPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 360929171}
+    - target: {fileID: 114997362301984926, guid: e933429b2caf51542baa5b3efa4471a5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2461767399814935561, guid: e933429b2caf51542baa5b3efa4471a5,
         type: 3}
       propertyPath: m_TagString
@@ -8221,6 +8226,7 @@ GameObject:
   - component: {fileID: 1545836168}
   - component: {fileID: 1545836167}
   - component: {fileID: 1545836169}
+  - component: {fileID: 1545836170}
   m_Layer: 0
   m_Name: CanvasContainer
   m_TagString: Untagged
@@ -8284,6 +8290,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cargoCheck: {fileID: 1690910161}
+--- !u!114 &1545836170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545836166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b121cb211b1d894d9f5f40f53a825d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1553041525
 GameObject:
   m_ObjectHideFlags: 0
