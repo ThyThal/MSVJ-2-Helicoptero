@@ -18,12 +18,14 @@ public class SceneChangingScript : MonoBehaviour
     private void Awake()
     {
         if (instance == null)
+        {
             instance = this;
+            DontDestroyOnLoad(this.gameObject);
+            DontDestroyOnLoad(loadingScreen);
+        }
         else
-            Destroy(this);
+            Destroy(this.gameObject);
 
-        DontDestroyOnLoad(this);
-        DontDestroyOnLoad(loadingScreen);
     }
     
     public void LoadScene(SceneIndex scene)
@@ -37,6 +39,7 @@ public class SceneChangingScript : MonoBehaviour
 
     private IEnumerator GetLoadSceneProgress()
     {
+        //loadingScreen.SetActive(true);
         for (int i = 0; i < _scenesLoading.Count; i++)
         {
             while (!_scenesLoading[i].isDone)
